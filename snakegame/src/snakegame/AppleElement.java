@@ -22,5 +22,7 @@ public class AppleElement extends BoardComponent {
         }
         screen.setObjectOnLocation(apple,x,y);
                  
+        this.setX(x);
+        this.setY(y);
     }
 }

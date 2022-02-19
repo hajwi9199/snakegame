@@ -21,13 +21,14 @@ public class Board {
     }
  
      
-    public void printBoard() {
+    public void printBoard(int score) {
         for (int i = 0; i < this.height; i++) {
             for (int j = 0; j < this.width; j++) {
                 System.out.print(this.boardMatrix[i][j]);
             }
             System.out.println();
         }
+        System.out.println("[SCORE: "+score+"]");
     }
  
      
@@ -51,5 +52,8 @@ public class Board {
      
     public void setObjectOnLocation(BoardComponent object, int x, int y) {
         this.boardMatrix[y][x] = object.getIcon();
+    }
+    public void setObjectOnLocation(char charSymbol, int x, int y) {
+        this.boardMatrix[y][x] = charSymbol;
     }
 }
